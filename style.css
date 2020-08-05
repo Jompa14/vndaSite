@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #F6F6F6;
+  font-family: 'PT Sans', sans-serif;
+  text-decoration: none;
+}
+/* fonte para titulos */
+/* font-family: 'Playfair Display', serif; */
+header {
+  background-color: #000000;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 3px;
+  font-size: 1em;
+}
+
+i.fa-bars {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  padding: 0 1em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.right-icons i {
+  padding: 0.5em;
+}
+
+/* main */
+
+/* hero image */
+.hero-image {
+  /* está foi a única imagem que fiz compressão
+  para fins de desempenho seria melhor realizar este processo em todas imagens */
+  background-image: url(banksy.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+/* imagens circulares */
+
+.badges {
+  margin: 50px auto;
+  display: flex;
+  width: 70%;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+.badge-image {
+  box-sizing: border-box;
+  margin: 0px auto;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* slider produtos */
+.produtos {
+  position: relative;
+  width: 85%;
+  height: 500px;
+  background-color: #272727;
+  margin-bottom: 50px;
+}
+
+.img-text {
+  width: 65%;
+  display: flex;
+  position: absolute;
+  top:15%;
+}
+
+.img-text-img {
+  width: 40%;
+  margin: 2%;
+}
+
+.text-call {
+  width: 40%;
+  margin: 2%;
+}
+
+.text-call h2 {
+  margin: 7% 0;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+}
+.small {
+  font-size: small;
+}
+
+.button {
+  background-color: rgb(245, 122, 21);
+  color: white;
+  text-decoration: none;
+  border-style: solid;
+  border-color: rgb(245, 122, 21);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.button:hover {
+  border-style: solid;
+  border-color: rgb(245, 122, 21);
+  background-color: #272727;
+  font-weight: bold;
+  color: rgb(245, 122, 21);
+}
+
+.swiper-container {
+  position: absolute;
+  left: 40%;
+  top:20%;
+  background-color: lightblue;
+  width: 400px;
+  height: 300px;
+}
+
+/* instagram */
+
+.insta {
+  background-color: #F6F6F6;
+}
+.insta h3 {
+  color: #000000;
+  margin: 5px auto;
+  display: table;
+}
+
+.insta-image {
+  margin: 50px auto;
+  display: flex;
+  width: 90%;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #272727;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #ffffff;
+  position: absolute;
+  padding: 20% 5%;
+  text-align: center;
+}
+
+
+/* Smartphones */
+
+@media screen and (max-width: 768px) {
+
+  /* navbar */
+    i.fa-bars {
+    cursor: pointer;
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    pointer-events: none;
+    top: 10vh;
+    left: 0;
+    transition: all 2s ease;
+    display: none;
+  }
+
+  .nav-links.open {
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.91);
+    font-size: 1.5em;
+    padding: 2em;
+    align-items: center;
+    display: block;
+  }
+
+  .nav-links li {
+    margin: 10px auto;
+  }
+
+  .right-icons i {
+    padding: 0em;
+  }
+
+  /* hero image */
+  .hero-image {
+    background-image: url(banksyMobi.jpeg);
+    background-size: cover;
+    height: 90vh;
+  }
+
+  /* distintivos */
+  .badges {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .badge-image {
+    width: 80%;
+    box-sizing: border-box;
+    margin: 0px auto;
+    border-radius: 50%;
+    padding: 10%;
+  }
+
+  /* slider produtos */
+  .produtos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #272727;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .img-text {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px auto;
+  }
+
+/* optei por não exibir tantas imagens no mobile */
+  .img-text-img {
+    display: none;
+  }
+
+  .text-call {
+    width: 80%;
+    margin: 2% auto;
+  }
+
+  .text-call h2 {
+    margin: 7% 0;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+  }
+  .small {
+    font-size: small;
+  }
+
+  .button {
+    background-color: rgb(245, 122, 21);
+    color: white;
+    text-decoration: none;
+    border-style: solid;
+    border-color: rgb(245, 122, 21);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .button:hover {
+    border-style: solid;
+    border-color: rgb(245, 122, 21);
+    background-color: #272727;
+    font-weight: bold;
+    color: rgb(245, 122, 21);
+  }
+/* não consegui renderizar direito o slider no mobile, então tirei */
+  .swiper-container {
+    position: unset;
+    width: 400px;
+    height: 300px;
+    display: none;
+  }
+
+  /* instagram */
+  .insta {
+    margin: 10px auto;
+  }
+  .insta-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .insta-pic {
+    border-radius: 50px;
+    width: 100%;
+    padding: 10%;
+  }
+
+
+}
