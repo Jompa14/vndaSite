@@ -1,15 +1,24 @@
+/* criei variáveis para definir corretamente as cores propostas pelo desafio */
+:root {
+    --black: #000000;
+    --dark: #272727;
+    --cream: #F5E5D9;
+    --pale: #F6F6F6;
+    --white: #FFFFFF;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #F6F6F6;
+  color: var(--pale);
   font-family: 'PT Sans', sans-serif;
   text-decoration: none;
 }
 /* fonte para titulos */
 /* font-family: 'Playfair Display', serif; */
 header {
-  background-color: #000000;
+  background-color: var(--black);
   height: 10vh;
   display: flex;
   justify-content: space-around;
@@ -73,18 +82,22 @@ ul {
 
 /* slider produtos */
 .produtos {
-  position: relative;
-  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* background gradiente: */
+  background: linear-gradient(0deg, var(--dark) 85%, var(--white) 85%);
+  /* background gradiente para o Google Chrome */
+  background: -webkit-linear-gradient(0deg, var(--dark) 85%, var(--white) 85%);
+  /* background gradiente para a Mozilla Firefox */
   height: 500px;
-  background-color: #272727;
   margin-bottom: 50px;
 }
 
 .img-text {
   width: 65%;
   display: flex;
-  position: absolute;
-  top:15%;
 }
 
 .img-text-img {
@@ -107,6 +120,7 @@ ul {
 }
 
 .button {
+  /* cor laranja: */
   background-color: rgb(245, 122, 21);
   color: white;
   text-decoration: none;
@@ -124,15 +138,13 @@ ul {
 .button:hover {
   border-style: solid;
   border-color: rgb(245, 122, 21);
-  background-color: #272727;
+  background-color: var(--dark);
   font-weight: bold;
   color: rgb(245, 122, 21);
 }
 
 .swiper-container {
-  position: absolute;
-  left: 40%;
-  top:20%;
+  display: flex;
   background-color: lightblue;
   width: 400px;
   height: 300px;
@@ -141,11 +153,12 @@ ul {
 /* instagram */
 
 .insta {
-  background-color: #F6F6F6;
+  background-color: var(--cream);
 }
 .insta h3 {
-  color: #000000;
+  color: var(--black);
   margin: 5px auto;
+  padding-top: 2%;
   display: table;
 }
 
@@ -171,7 +184,7 @@ ul {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #272727;
+  background-color: var(--dark);
 }
 
 .container:hover .overlay {
@@ -179,7 +192,7 @@ ul {
 }
 
 .text {
-  color: #ffffff;
+  color: var(--white);
   position: absolute;
   padding: 20% 5%;
   text-align: center;
@@ -210,6 +223,7 @@ ul {
 
   .nav-links.open {
     pointer-events: all;
+    /* preto com transparência: */
     background-color: rgba(0, 0, 0, 0.91);
     font-size: 1.5em;
     padding: 2em;
@@ -252,25 +266,25 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #272727;
-    margin-bottom: 50px;
+    align-items: center;
     width: 100%;
+    height: auto;
+    background: var(--dark);
+    margin-bottom: 50px;
   }
 
   .img-text {
     width: 100%;
-    box-sizing: border-box;
-    margin: 0px auto;
+    display: flex;
   }
 
-/* optei por não exibir tantas imagens no mobile */
   .img-text-img {
     display: none;
   }
 
   .text-call {
-    width: 80%;
-    margin: 2% auto;
+    width: 100%;
+    margin: 5% 10%;
   }
 
   .text-call h2 {
@@ -283,6 +297,7 @@ ul {
   }
 
   .button {
+    /* cor laranja: */
     background-color: rgb(245, 122, 21);
     color: white;
     text-decoration: none;
@@ -300,19 +315,20 @@ ul {
   .button:hover {
     border-style: solid;
     border-color: rgb(245, 122, 21);
-    background-color: #272727;
+    background-color: var(--dark);
     font-weight: bold;
     color: rgb(245, 122, 21);
   }
-/* não consegui renderizar direito o slider no mobile, então tirei */
+
   .swiper-container {
-    position: unset;
-    width: 400px;
+    display: flex;
+    margin: 5%;
+    background-color: var(--dark);
+    max-width: 100%;
     height: 300px;
-    display: none;
   }
 
-  /* instagram */
+    /* instagram */
   .insta {
     margin: 10px auto;
   }
