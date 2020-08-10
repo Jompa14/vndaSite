@@ -201,12 +201,117 @@ ul {
   text-align: center;
 }
 
+/* linha que marca o início do footer */
+.footerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.line {
+  width: 45%;
+  height: 3px;
+  background-color: var(--dark);
+}
+
+.footerLogo h3 {
+  color: var(--black);
+}
+
+/* principal seção do footer */
+.footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerWrapper h4 {
+  padding: 5% 5% 5% 0;
+  color: var(--black);
+}
+
+.footerWrapper a {
+  color: var(--black);
+}
+
+.footerWrapper i {
+  color: var(--black);
+}
+
+.footerWrapper input {
+  color: var(--black);
+}
+
+.leftWrapper {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.centerWrapper {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.centerWrapper form {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom-style: solid;
+  border-bottom-color: var(--dark);
+}
+
+.email {
+  border-style: none;
+  font-size: large;
+  width: 80%;
+}
+
+.email:hover {
+  background-color: var(--cream);
+}
+
+.email:focus {
+  border-style: none;
+  font-size: large;
+  background-color: var(--cream);
+}
+
+.submit {
+  background-color: var(--white);
+  border-style: none;
+  font-size: large;
+}
+
+.submit:hover {
+  border-style: none;
+  font-size: large;
+  background-color: var(--cream);
+}
+
+.rightWrapper {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.p-footer {
+  width: 100%;
+  font-size: x-small;
+  display: flex;
+  justify-content: center;
+  color: var(--black);
+  margin: 3% auto;
+}
+
 /* Tablets */
 @media only screen and (max-width: 768px) {
   /* navbar */
-    i.fa-bars {
-    cursor: pointer;
-    display: flex;
+  i.fa-bars {
+  cursor: pointer;
+  display: flex;
   }
 
   .nav-links {
@@ -214,19 +319,17 @@ ul {
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    pointer-events: none;
-    top: 10vh;
+    top: 1000px;
     left: 0;
-    transition: all 2s ease;
-    display: none;
+    transition: all 0.8s ease;
   }
 
   .nav-links.open {
-    pointer-events: all;
     /* preto com transparência: */
     background-color: rgba(0, 0, 0, 0.91);
     font-size: 1.5em;
     padding: 2em;
+    top: 10vh;
     align-items: center;
     display: block;
   }
@@ -242,13 +345,6 @@ ul {
   /* hero image continua a mesma da resolução desktop */
 
   /* imagens circulares */
-  .badges {
-    margin: 50px auto;
-    display: flex;
-    width: 70%;
-    box-sizing: border-box;
-    justify-content: space-around;
-  }
 
   .badge-image {
     box-sizing: border-box;
@@ -259,14 +355,9 @@ ul {
 
   /* slider produtos */
   .produtos {
-    display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
     background: var(--dark);
     height: auto;
-    margin-bottom: 50px;
   }
 
   .img-text {
@@ -339,19 +430,17 @@ ul {
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    pointer-events: none;
-    top: 10vh;
+    top: 1000px;
     left: 0;
-    transition: all 2s ease;
-    display: none;
+    transition: all 0.8s ease;
   }
 
   .nav-links.open {
-    pointer-events: all;
     /* preto com transparência: */
     background-color: rgba(0, 0, 0, 0.91);
     font-size: 1.5em;
     padding: 2em;
+    top: 10vh;
     align-items: center;
     display: block;
   }
@@ -388,14 +477,8 @@ ul {
 
   /* slider produtos */
   .produtos {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
     background: var(--dark);
-    margin-bottom: 50px;
   }
 
   .img-text {
@@ -458,7 +541,6 @@ ul {
     margin: 10px auto;
   }
   .insta-image {
-    display: flex;
     flex-direction: column;
     justify-content: center;
   }
@@ -469,5 +551,95 @@ ul {
     padding: 10%;
   }
 
+  .footerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footerWrapper h4 {
+    display: none;
+  }
+
+  .leftWrapper {
+    width: 100%;
+    margin: 5% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .leftWrapper li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  .centerWrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .centerWrapper form {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom-style: solid;
+    border-bottom-color: var(--dark);
+  }
+
+  .email {
+    border-style: none;
+    font-size: large;
+    width: 70%;
+  }
+
+  .email:hover {
+    background-color: var(--cream);
+  }
+
+  .email:focus {
+    border-style: none;
+    font-size: large;
+    background-color: var(--cream);
+  }
+
+  .submit {
+    background-color: var(--white);
+    border-style: none;
+    font-size: large;
+  }
+
+  .submit:hover {
+    border-style: none;
+    font-size: large;
+    background-color: var(--cream);
+  }
+
+  .rightWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .rightWrapper a {
+    padding: 10px;
+  }
+
+  .p-footer {
+    width: 100%;
+    font-size: x-small;
+    display: flex;
+    justify-content: center;
+    color: var(--black);
+    margin: 3% auto;
+  }
 
 }

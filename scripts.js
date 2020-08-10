@@ -28,3 +28,8 @@ var mySwiper = new Swiper('.swiper-container', {
     el: '.swiper-scrollbar',
   },
 })
+
+// esconde o menu hamburger quando o usuario der skroll (mobile)
+window.onscroll = () => {
+  navLinks.classList.remove("open");
+}
