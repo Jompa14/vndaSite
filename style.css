@@ -85,11 +85,12 @@ ul {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  /* background gradiente: */
-  background: linear-gradient(0deg, var(--dark) 85%, var(--white) 85%);
   /* background gradiente para o Google Chrome */
   background: -webkit-linear-gradient(0deg, var(--dark) 85%, var(--white) 85%);
   /* background gradiente para a Mozilla Firefox */
+  /* also this is the defaul option */
+  background: linear-gradient(0deg, var(--dark) 85%, var(--white) 85%);
+
   height: 500px;
   margin-bottom: 50px;
 }
