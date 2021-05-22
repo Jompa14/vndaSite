@@ -213,7 +213,6 @@ ul {
   height: 100%;
   width: 100%;
   visibility: hidden;
-  transition: .5s ease;
   /* preto com transparência: */
   background-color: rgba(0, 0, 0, 0.83);
 }
