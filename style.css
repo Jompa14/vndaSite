@@ -182,28 +182,26 @@ ul {
 
 .insta {
   background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .insta h3 {
   color: var(--black);
-  margin: 5px auto;
-  padding-top: 2%;
-  display: table;
+  margin-top: 5%;
 }
 
-.insta-image {
-  margin: 50px auto;
+.insta-pics {
   display: flex;
+  flex-flow: row wrap;
   width: 90%;
   box-sizing: border-box;
   justify-content: space-around;
 }
 
-.insta-pic {
-  border-radius: 10%;
-}
-
 .container {
   position: relative;
+  margin: 3%;
 }
 
 .overlay {
@@ -214,14 +212,14 @@ ul {
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  border-radius: 10%;
+  visibility: hidden;
   transition: .5s ease;
-  background-color: var(--dark);
+  /* preto com transparência: */
+  background-color: rgba(0, 0, 0, 0.83);
 }
-
-.container:hover .overlay {
-  opacity: 1;
+/* importante usar a propriedade visibility para q os bots de busca localizem o texto */
+.container:hover .overlay{
+  visibility: visible;
 }
 
 .text {
@@ -455,8 +453,6 @@ ul {
     height: 90vh;
   }
 
-
-
   /* slider produtos */
   .produtos {
     flex-direction: column;
@@ -477,21 +473,6 @@ ul {
     background-color: var(--dark);
     max-width: 100%;
     height: 300px;
-  }
-
-    /* instagram */
-  .insta {
-    margin: 10px auto;
-  }
-  .insta-image {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .insta-pic {
-    border-radius: 50px;
-    width: 100%;
-    padding: 10%;
   }
 
   .footerWrapper {
