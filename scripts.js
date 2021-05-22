@@ -9,8 +9,9 @@ hamburger.addEventListener("click", () => {
 // Inicia o Swiper
 var mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
-  direction: 'vertical',
+  effect: 'cube',
   loop: true,
+  speed: 500,
 
   // If we need pagination
   pagination: {

@@ -5,6 +5,7 @@
     --cream: #F5E5D9;
     --pale: #F6F6F6;
     --white: #FFFFFF;
+    --swiper-theme-color: #6a2efb !important;
 }
 
 * {
@@ -27,6 +28,7 @@ header {
   font-size: 1em;
 }
 
+
 i.fa-bars {
   display: none;
 }
@@ -36,11 +38,34 @@ i.fa-bars {
 }
 
 .nav-links a {
-  padding: 0 1em;
+  font-size: 1em;
+  padding-bottom: 0.2em;
+  margin: 0 0.8em;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+/* efeito hover nos links Menu */
+.effect {
+  position: relative;
+  padding: 10px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.effect:before {
+  content: "";
+  position: absolute;
+  transition: transform 0.8s ease;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  /* gradiente roxo e rosa */
+  background-image: linear-gradient(60deg, #6a2efb 0%, #c916ff 100%);
+  bottom: 0;
+  transform:  translateX(-100%);
+  }
+
+.effect:hover:before {
+  transform:  translateX(0);
 }
 
 ul {
@@ -63,15 +88,24 @@ ul {
   height: 90vh;
 }
 
-/* imagens circulares */
+/* distintivos */
 .badges {
   margin: 50px auto;
   display: flex;
+  flex-flow: row wrap;
   width: 70%;
   box-sizing: border-box;
   justify-content: space-around;
 }
 
+/* classe que faz os elementos "preencherem" espaços vazios */
+
+.basis-grow1 {
+  flex-basis: 100px;
+  flex-grow: 1;
+}
+
+/* imagens circulares */
 .badge-image {
   box-sizing: border-box;
   margin: 0px auto;
@@ -85,29 +119,27 @@ ul {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  /* background gradiente para o Google Chrome */
-  background: -webkit-linear-gradient(0deg, var(--dark) 85%, var(--white) 85%);
+  background: -webkit-linear-gradient(to right, var(--dark) 75%, var(--white) 75%);
   /* background gradiente para a Mozilla Firefox */
-  /* also this is the defaul option */
-  background: linear-gradient(0deg, var(--dark) 85%, var(--white) 85%);
-
+  background: linear-gradient(to right, var(--dark) 75%, var(--white) 75%);
   height: 500px;
   margin-bottom: 50px;
 }
 
-.img-text {
-  width: 65%;
-  display: flex;
-}
 
 .img-text-img {
-  width: 40%;
+  /* width: 40%; */
+  max-height: 400px;
   margin: 2%;
 }
 
 .text-call {
-  width: 40%;
-  margin: 2%;
+  max-width: 25%;
+  margin: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
 .text-call h2 {
@@ -119,13 +151,18 @@ ul {
   font-size: small;
 }
 
+.text-gradient {
+  background: -webkit-linear-gradient(60deg, #6a2efb 0%, #c916ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 .button {
-  /* cor laranja: */
-  background-color: rgb(245, 122, 21);
-  color: white;
+  font-size: 140%;
+  font-weight: bolder;
   text-decoration: none;
-  border-style: solid;
-  border-color: rgb(245, 122, 21);
+  border-style: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
@@ -135,17 +172,9 @@ ul {
   display: inline-block;
 }
 
-.button:hover {
-  border-style: solid;
-  border-color: rgb(245, 122, 21);
-  background-color: var(--dark);
-  font-weight: bold;
-  color: rgb(245, 122, 21);
-}
-
 .swiper-container {
   display: flex;
-  max-width: 100%;
+  max-width: 400px;
   height: 300px;
 }
 
@@ -249,10 +278,6 @@ ul {
   margin: 0 auto;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
 .centerWrapper {
   width: 45%;
   margin: 0 auto;
@@ -328,10 +353,9 @@ ul {
   .nav-links.open {
     /* preto com transparência: */
     background-color: rgba(0, 0, 0, 0.91);
-    font-size: 1.5em;
+    font-size: 1.7em;
     padding: 2em;
     top: 10vh;
-    align-items: center;
     display: block;
   }
 
@@ -361,57 +385,27 @@ ul {
     height: auto;
   }
 
-  .img-text {
-    width: 100%;
-    display: flex;
-  }
-
   .img-text-img {
     width: 40%;
     margin: 2%;
   }
 
   .text-call {
-    width: 40%;
-    margin: 2%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5% 10%;
   }
 
-  .text-call h2 {
-    margin: 7% 0;
-    letter-spacing: 2px;
-    font-family: 'Playfair Display', serif;
-  }
   .small {
     font-size: small;
   }
 
-  .button {
-    /* cor laranja: */
-    background-color: rgb(245, 122, 21);
-    color: white;
-    text-decoration: none;
-    border-style: solid;
-    border-color: rgb(245, 122, 21);
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 10px;
-    margin-top: 15px;
-    display: inline-block;
-  }
-
-  .button:hover {
-    border-style: solid;
-    border-color: rgb(245, 122, 21);
-    background-color: var(--dark);
-    font-weight: bold;
-    color: rgb(245, 122, 21);
-  }
 
   .swiper-container {
     display: flex;
-    max-width: 100%;
+    max-width: 600px;
     height: 300px;
   }
 
@@ -461,20 +455,7 @@ ul {
     height: 90vh;
   }
 
-  /* distintivos */
-  .badges {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 
-  .badge-image {
-    width: 80%;
-    box-sizing: border-box;
-    margin: 0px auto;
-    border-radius: 50%;
-    padding: 10%;
-  }
 
   /* slider produtos */
   .produtos {
@@ -482,51 +463,12 @@ ul {
     background: var(--dark);
   }
 
-  .img-text {
-    width: 100%;
-    display: flex;
-  }
-
   .img-text-img {
     display: none;
   }
 
-  .text-call {
-    width: 100%;
-    margin: 5% 10%;
-  }
-
-  .text-call h2 {
-    margin: 7% 0;
-    letter-spacing: 2px;
-    font-family: 'Playfair Display', serif;
-  }
   .small {
     font-size: small;
-  }
-
-  .button {
-    /* cor laranja: */
-    background-color: rgb(245, 122, 21);
-    color: white;
-    text-decoration: none;
-    border-style: solid;
-    border-color: rgb(245, 122, 21);
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 10px;
-    margin-top: 15px;
-    display: inline-block;
-  }
-
-  .button:hover {
-    border-style: solid;
-    border-color: rgb(245, 122, 21);
-    background-color: var(--dark);
-    font-weight: bold;
-    color: rgb(245, 122, 21);
   }
 
   .swiper-container {
@@ -574,10 +516,6 @@ ul {
   .leftWrapper li {
     display: inline-block;
     margin: 0 5px;
-  }
-
-  .footer-links a:hover {
-    text-decoration: underline;
   }
 
   .centerWrapper {
@@ -641,6 +579,15 @@ ul {
     justify-content: center;
     color: var(--black);
     margin: 3% auto;
+  }
+
+}
+
+/* small devices */
+@media screen and (max-width: 360px) {
+  .swiper-container {
+    max-width: 100%;
+    height: 260px;
   }
 
 }
