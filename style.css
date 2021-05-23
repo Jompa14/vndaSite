@@ -98,6 +98,18 @@ ul {
   justify-content: space-around;
 }
 
+/* .scroll-sec {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background: -webkit-linear-gradient(to bottom, var(--dark) 40%, var(--white) 40%);
+  background: linear-gradient(to bottom, var(--dark) 40%, var(--white) 40%);
+  height: 500px;
+} */
+
+
 /* classe que faz os elementos "preencherem" espaços vazios */
 
 .basis-grow1 {
@@ -144,6 +156,7 @@ ul {
 
 .text-call h2 {
   margin: 7% 0;
+  font-size: xx-large;
   letter-spacing: 2px;
   font-family: 'Playfair Display', serif;
 }
@@ -181,7 +194,6 @@ ul {
 /* instagram */
 
 .insta {
-  background-color: var(--cream);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -383,6 +395,10 @@ ul {
     width: 40%;
   }
 
+  .img-text-img {
+    display: none;
+  }
+
   .text-call {
     max-width: 100%;
     display: flex;
@@ -401,10 +417,6 @@ ul {
     background-image: url(banksyMobi.jpeg);
     background-size: cover;
     height: 90vh;
-  }
-
-  .img-text-img {
-    display: none;
   }
 
   .footerWrapper {
