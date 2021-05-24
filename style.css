@@ -124,7 +124,7 @@ ul {
   background-color: var(--dark);
   width: 100%;
   height: 400px;
-  top: -1px;
+  top: 10%;
 }
 
 .cards {
@@ -387,7 +387,36 @@ ul {
 }
 
 /* Tablets na Horizontal */
-@media only screen and (max-width: 1007px){
+@media only screen and (max-width: 1096px){
+
+  .scroll-sec {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sticky {
+    position: static; /*pessima pratica. ToDo: função js q remove classe sticky*/
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+
+  .text-call {
+    max-width: 40%;
+  }
+
+  .cards {
+    max-width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-right: 0;
+    order: 2;
+  }
+  .margin-top {
+    margin-top: 3%;
+  }
+
   /* slider produtos */
   .produtos {
     background: var(--dark);
@@ -396,8 +425,7 @@ ul {
 }
 
 
-
-/* Tablets */
+/* big landscape tablets, laptops, and desktops */
 @media only screen and (max-width: 768px) {
   /* navbar */
   i.fa-bars {
