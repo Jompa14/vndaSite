@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Jompa14/vndaSite#readme",
   "dependencies": {
     "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
