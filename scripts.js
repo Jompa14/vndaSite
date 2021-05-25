@@ -6,6 +6,11 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 });
 
+// esconde o menu hamburger quando o usuario der skroll (mobile)
+window.onscroll = () => {
+  navLinks.classList.remove("open");
+}
+
 // Inicia o Swiper
 var mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
@@ -28,9 +33,18 @@ var mySwiper = new Swiper('.swiper-container', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-})
+});
 
-// esconde o menu hamburger quando o usuario der skroll (mobile)
-window.onscroll = () => {
-  navLinks.classList.remove("open");
-}
+// Lazy load das imagens com o Appear.js
+appear({
+  init: function init(){
+    console.log("appear funcionando")
+  },
+  elements: function elements(){
+    return document.querySelector('img[data-src]');
+  },
+  appear: function appear(elemento) {
+    elemento.src = elemento.dataset.src;
+  },
+  bounds: 50
+});
