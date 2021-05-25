@@ -13,6 +13,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://kit.fontawesome.com/a5678f31ed.js"
     crossorigin="anonymous"></script>
+
     <title>Cyber Site</title>
   </head>
   <body>
@@ -52,18 +53,18 @@
     </section>
     <!-- Imagens aredondadas ou "distintivos" -->
     <section class="badges">
-        <img class="badge-image .basis-grow1" src="https://picsum.photos/100/?blur" alt="random">
-        <img class="badge-image .basis-grow1" src="https://picsum.photos/100/?grayscale" alt="random">
-        <img class="badge-image .basis-grow1" src="https://picsum.photos/100" alt="random">
-        <img class="badge-image .basis-grow1" src="https://picsum.photos/100" alt="random">
-        <img class="badge-image .basis-grow1" src="https://picsum.photos/100/?grayscale" alt="random">
-        <img class="badge-image .basis-grow1" src="https://picsum.photos/100/?blur" alt="random">
+        <img class="badge-image .basis-grow1" data-src="https://picsum.photos/100/?blur" alt="random">
+        <img class="badge-image .basis-grow1" data-src="https://picsum.photos/100/?grayscale" alt="random">
+        <img class="badge-image .basis-grow1" data-src="https://picsum.photos/100" alt="random">
+        <img class="badge-image .basis-grow1" data-src="https://picsum.photos/100" alt="random">
+        <img class="badge-image .basis-grow1" data-src="https://picsum.photos/100/?grayscale" alt="random">
+        <img class="badge-image .basis-grow1" data-src="https://picsum.photos/100/?blur" alt="random">
     </section>
 
     <section class="scroll-sec">
       <div class="cards">
         <figure class="card">
-          <img class="" src="https://picsum.photos/350/450" alt="random">
+          <img class="" data-src="https://picsum.photos/350/450" alt="random">
           <h5 class="card-title">Título do Banner</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -71,7 +72,7 @@
           </p>
         </figure>
         <figure class="card">
-          <img class="" src="https://picsum.photos/350/250" alt="random">
+          <img class="" data-src="https://picsum.photos/350/250" alt="random">
           <p class="card-title">Título do Banner</p>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -79,7 +80,7 @@
           </p>
         </figure>
         <figure class="card margin-top">
-          <img class="" src="https://picsum.photos/350/450?blur" alt="random">
+          <img class="" data-src="https://picsum.photos/350/450?blur" alt="random">
           <p class="card-title">Título do Banner</p>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -104,7 +105,7 @@
 
     <section class="produtos">
       <!-- <article class="img-text"> -->
-        <img class="img-text-img" src="https://picsum.photos/300/400" alt="random">
+        <img class="img-text-img" data-src="https://picsum.photos/300/400" alt="random">
         <div class="text-call">
           <p class="small"> Lorem Ipsum dorem lor</p>
           <h2>Lorem Ipsum dolorsit amet</h2>
@@ -148,7 +149,7 @@
       <div class="insta-pics">
         <!-- div para englobar cada imagem(nesse caso a 1º) com seu texto-->
         <div class="container">
-          <img class="insta-pic" src="https://picsum.photos/250" alt="random">
+          <img class="insta-pic" data-src="https://picsum.photos/250" alt="random">
           <div class="overlay">
             <div class="text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -158,7 +159,7 @@
         </div>
         <!-- div para englobar cada imagem(nesse caso a 2º) com seu texto-->
         <div class="container">
-          <img class="insta-pic" src="https://picsum.photos/250" alt="random">
+          <img class="insta-pic" data-src="https://picsum.photos/250" alt="random">
           <div class="overlay">
             <div class="text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -168,7 +169,7 @@
         </div>
         <!-- div para englobar cada imagem(nesse caso a 3º) com seu texto-->
         <div class="container">
-          <img class="insta-pic" src="https://picsum.photos/250" alt="random">
+          <img class="insta-pic" data-src="https://picsum.photos/250" alt="random">
           <div class="overlay">
             <div class="text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -223,6 +224,8 @@
       <p class="p-footer">@Vnda -Tecnologia para ecommerce - CNPJ 000000 0000 000 00-01</p>
     </footer>
   </main>
-    <script src="scripts.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="appearJS/appear.js"></script>
+  <script src="scripts.js"></script>
   </body>
 </html>
