@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jompa14/vndaSite/issues"
   },
-  "homepage": "https://github.com/Jompa14/vndaSite#readme"
+  "homepage": "https://github.com/Jompa14/vndaSite#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
 }
