@@ -80,9 +80,7 @@ ul {
 
 /* hero image */
 .hero-image {
-  /* está foi a única imagem que fiz compressão
-  para fins de desempenho seria melhor realizar este processo em todas imagens */
-  background-image: url(banksy.jpeg);
+  background-image: url('../img/banksy.jpeg');
   background-size: 100%;
   background-repeat: no-repeat;
   height: 90vh;
@@ -487,11 +485,14 @@ ul {
 
   /* hero image */
   .hero-image {
-    background-image: url(banksyMobi.jpeg);
+    background-image: url('../img/banksyMobi.jpeg');
     background-size: cover;
     height: 90vh;
   }
 
+  .swiper-container {
+    max-width: 100%;
+  }
   .footerWrapper {
     display: flex;
     flex-direction: column;
