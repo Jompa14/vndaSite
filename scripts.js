@@ -41,10 +41,11 @@ appear({
     console.log("appear funcionando")
   },
   elements: function elements(){
-    return document.querySelector('img[data-src]');
+    console.log('oi')
+    return document.querySelectorAll('img[data-src]');
   },
   appear: function appear(elemento) {
     elemento.src = elemento.dataset.src;
   },
-  bounds: 50
+  bounds: 200
 });
