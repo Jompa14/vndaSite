@@ -32,6 +32,10 @@ i.fa-bars {
   display: none;
 }
 
+i:hover {
+  color: #6a2efb;
+}
+
 .nav-links {
   display: flex;
 }
