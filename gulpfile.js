@@ -3,7 +3,7 @@ const uglifycss = require('gulp-uglifycss')
 
 
 gulp.task('uglifycss', function () {
-  gulp.src('*.css')
+  return gulp.src('*.css')
     .pipe(uglifycss({
       // "maxLineLen": 200,
       "uglyComments": true
@@ -11,17 +11,11 @@ gulp.task('uglifycss', function () {
     .pipe(gulp.dest('./dist/'));
 });
 
-// quando houverem mais tasks podem ser add neste array:
-// gulp.task('run', ['uglifycss']);
+// quando houverem mais tasks podem ser add dentro da series():
+gulp.task("run", gulp.series("uglifycss"));
 
-// gulp.task('watch', function() {
-//   gulp.watch('*.css', ['uglifycss'])
-// });
+gulp.task('watch', function() {
+    gulp.watch('*.css', gulp.parallel('uglifycss'));
+});
 
-// gulp.task('default', 'uglifycss');
-function defaultTask(cb) {
-  // place code for your default task here
-  cb();
-}
-
-exports.default = defaultTask
+gulp.task('default', gulp.parallel('run','watch'));
