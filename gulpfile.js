@@ -6,12 +6,12 @@ const sass      = require('gulp-sass');
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.sass')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./src/style.css'));
 });
 
 
 gulp.task('uglifycss', function () {
-  return gulp.src('*.css')
+  return gulp.src('./src/style.css')
     .pipe(uglifycss({
       // "maxLineLen": 200,
       "uglyComments": true
