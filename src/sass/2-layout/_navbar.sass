@@ -1,4 +1,4 @@
-header 
+header
   background-color: var(--black)
   height: 10vh
   display: flex
@@ -6,3 +6,33 @@ header
   align-items: center
   letter-spacing: 3px
   font-size: 1em
+
+.nav-links
+  display: flex
+
+.nav-links a
+  font-size: 1em
+  padding-bottom: 0.2em
+  margin: 0 0.8em
+
+
+@media (min-width: $bp-tablet)
+    .nav-links
+      position: fixed
+      height: 100vh
+      width: 100%
+      flex-direction: column
+      top: 1000px
+      left: 0
+      transition: all 0.8s ease
+
+    .nav-links.open
+      /* preto com transparência: */
+      background-color: rgba(0, 0, 0, 0.91)
+      font-size: 1.7em
+      padding: 2em
+      top: 10vh
+      display: block
+
+    .nav-links li
+      margin: 10px auto
