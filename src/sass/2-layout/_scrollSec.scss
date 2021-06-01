@@ -21,24 +21,24 @@
   max-width: 65%;
   max-height: 100%;
 }
-  @media (min-width: $bp-tablet-paisagem) {
-    .scroll-sec {
-      display: flex;
-      flex-direction: column;
-      height: auto;
-    }
-    .sticky {
-      // pessima pratica. ToDo: função js q remove classe sticky
-      position: static;
-      display: flex;
-      justify-content: center;
-      order: 1;
-    }
-    .cards {
-      max-width: 100%;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      margin-right: 0;
-      order: 2;
-    }
+@media (max-width: $bp-tablet-paisagem) {
+  .scroll-sec {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .sticky {
+    // pessima pratica. ToDo: função js q remove classe sticky
+    position: static;
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+  .cards {
+    max-width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-right: 0;
+    order: 2;
+  }
 }

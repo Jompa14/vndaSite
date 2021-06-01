@@ -31,7 +31,7 @@
   letter-spacing: 2px;
   font-family: $playfair;
 }
-@media (min-width: $bp-tablet-paisagem) {
+@media (max-width: $bp-tablet-paisagem) {
   .produtos {
     background: $dark;
     height: auto;
@@ -40,7 +40,7 @@
     max-width: 40%;
   }
 }
-@media (min-width: $bp-tablet) {
+@media (max-width: $bp-tablet) {
     .img-text-img {
       width: 40%;
     }

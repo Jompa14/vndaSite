@@ -1,5 +1,5 @@
 header {
-  background-color: var(--black);
+  background-color: $black;
   height: 10vh;
   display: flex;
   justify-content: space-around;
@@ -16,7 +16,7 @@ header {
   margin: 0 0.8em;
 }
 
-@media (min-width: $bp-tablet) {
+@media (max-width: $bp-tablet) {
     .nav-links {
       position: fixed;
       height: 100vh;

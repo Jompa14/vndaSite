@@ -5,8 +5,8 @@
   color: $pale;
   font-family: $pt-sans;
   text-decoration: none;
-/* fonte para titulos */
-/* font-family: $playfair */
+  --swiper-theme-color: #6a2efb !important;
+/* fonte para titulos: font-family: $playfair */
 }
 
 ul {
@@ -37,12 +37,12 @@ i:hover {
   font-size: small;
 }
 
-@media (min-width: $bp-tablet-paisagem) {
+@media (max-width: $bp-tablet-paisagem) {
   .margin-top {
     margin-top: 3%;
   }
 }
-@media (min-width: $bp-tablet) {
+@media (max-width: $bp-tablet) {
   i.fa-bars {
   cursor: pointer;
   display: flex;

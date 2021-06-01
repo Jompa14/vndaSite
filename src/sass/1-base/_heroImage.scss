@@ -6,7 +6,7 @@
   height: 90vh;
 }
 
-@media (min-width: $bp-smartphones) {
+@media (max-width: $bp-smartphones) {
   .hero-image {
     background-image: url('../img/banksyMobi.jpeg');
     background-size: cover;

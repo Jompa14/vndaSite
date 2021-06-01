@@ -1,5 +1,5 @@
 .card {
-  background-color: var(--cream);
+  background-color: $cream;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
   z-index: 1;
@@ -15,11 +15,11 @@
   font-weight: bold;
   font-size: 1.1em;
   padding-top: 5%;
-  color: var(--black);
+  color: $black;
 }
 
 .card-text {
   font-family: 'Playfair Display', serif;
   padding: 5%;
-  color: var(--black);
+  color: $black;
 }

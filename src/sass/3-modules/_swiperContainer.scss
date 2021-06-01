@@ -3,12 +3,13 @@
   max-width: 400px;
   height: 300px;
 }
-@media (min-width: $bp-smartphones) {
+
+@media (max-width: $bp-smartphones) {
   .swiper-container {
     max-width: 100%;
   }
 }
-@media (min-width: $bp-small-devices) {
+@media (max-width: $bp-small-devices) {
   .swiper-container {
     max-width: 100%;
     height: 260px;
