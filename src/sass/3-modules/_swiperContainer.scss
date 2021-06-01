@@ -3,7 +3,7 @@
   max-width: 400px;
   height: 300px;
 }
-@media (min-width: $bg-smartphones) {
+@media (min-width: $bp-smartphones) {
   .swiper-container {
     max-width: 100%;
   }

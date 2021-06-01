@@ -23,7 +23,7 @@
   padding: 5% 5% 5% 0;
   color: $black;
 }
-.footerWrapper a {}
+.footerWrapper a {
   color: $black;
 }
 .footerWrapper i {
@@ -82,7 +82,7 @@
   margin: 3% auto;
 }
 
-  @media (min-width: $bg-smartphones) {
+  @media (min-width: $bp-smartphones) {
       .footerWrapper {
         display: flex;
         flex-direction: column;
