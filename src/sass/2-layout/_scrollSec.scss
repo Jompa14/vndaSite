@@ -1,0 +1,44 @@
+/* sessão scroll */
+.scroll-sec {
+  width: 100%;
+  height: 1100px;
+}
+.sticky {
+  position: sticky;
+  padding: 5%;
+  background-color: $dark;
+  width: 100%;
+  height: 400px;
+  top: 10%;
+}
+.cards {
+  float: right;
+  margin-right: 5%;
+  display: flex;
+  flex-flow: column-reverse wrap-reverse;
+  justify-content: flex-end;
+  align-items: start;
+  max-width: 65%;
+  max-height: 100%;
+}
+  @media (min-width: $bp-tablet-paisagem) {
+    .scroll-sec {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+    .sticky {
+      // pessima pratica. ToDo: função js q remove classe sticky
+      position: static;
+      display: flex;
+      justify-content: center;
+      order: 1;
+    }
+    .cards {
+      max-width: 100%;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      margin-right: 0;
+      order: 2;
+    }
+}

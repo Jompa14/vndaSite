@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  margin: 3%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  /* preto com transparência: */
+  background-color: $preto-transparente;
+}
+/* importante usar a propriedade visibility para q os bots de busca localizem o texto */
+.container:hover .overlay {
+  visibility: visible;
+}
+.text {
+  color: $white;
+  position: absolute;
+  padding: 20% 5%;
+  text-align: center;
+}

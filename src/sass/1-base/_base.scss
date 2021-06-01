@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $pale;
+  font-family: $pt-sans;
+  text-decoration: none;
+/* fonte para titulos */
+/* font-family: $playfair */
+}
+
+ul {
+  list-style-type: none;
+}
+
+.right-icons i {
+  padding: 0.5em;
+}
+
+i.fa-bars {
+  display: none;
+}
+
+i:hover {
+  color: $purple;
+}
+/* classe que faz os elementos "preencherem" espaços vazios */
+.basis-grow1 {
+  flex-basis: 100px;
+  flex-grow: 1;
+}
+
+.margin-top {
+  margin-top: 50%;
+}
+.small {
+  font-size: small;
+}
+
+@media (min-width: $bp-tablet-paisagem) {
+  .margin-top {
+    margin-top: 3%;
+  }
+}
+@media (min-width: $bp-tablet) {
+  i.fa-bars {
+  cursor: pointer;
+  display: flex;
+  }
+  .right-icons i {
+    padding: 0em;
+  }
+}

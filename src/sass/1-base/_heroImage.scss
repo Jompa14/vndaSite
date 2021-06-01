@@ -1,0 +1,15 @@
+/* hero image */
+.hero-image {
+  background-image: url('../img/banksy.jpeg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+@media (min-width: $bg-smartphones) {
+  .hero-image {
+    background-image: url('../img/banksyMobi.jpeg');
+    background-size: cover;
+    height: 90vh;
+  }
+}

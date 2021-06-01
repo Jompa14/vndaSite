@@ -1,0 +1,16 @@
+/* distintivos */
+.badges {
+  margin: 50px auto;
+  display: flex;
+  flex-flow: row wrap;
+  width: 70%;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+/* imagens circulares */
+.badge-image {
+  box-sizing: border-box;
+  margin: 0px auto;
+  border-radius: 50%;
+  padding: 10px;
+}

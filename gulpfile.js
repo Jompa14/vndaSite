@@ -2,16 +2,16 @@ const gulp      = require('gulp');
 const uglifycss = require('gulp-uglifycss');
 const sass      = require('gulp-sass');
 
-
+sass.compiler = require('node-sass')
 gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.sass')
+  return gulp.src('./src/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('.src/css/'));
 });
 
 
 gulp.task('uglifycss', function () {
-  return gulp.src('./src/style.css')
+  return gulp.src('./src/css/*.css')
     .pipe(uglifycss({
       // "maxLineLen": 200,
       "uglyComments": true
@@ -23,8 +23,8 @@ gulp.task('uglifycss', function () {
 gulp.task("run", gulp.series('sass', 'uglifycss'));
 
 gulp.task('watch', function() {
-    gulp.watch('./sass/*.sass', gulp.series('sass'));
-    gulp.watch('*.css', gulp.parallel('uglifycss'));
+    gulp.watch('./src/sass/**/*.scss', gulp.series('sass'));
+    gulp.watch('./src/css/*.css', gulp.parallel('uglifycss'));
 });
 
 gulp.task('default', gulp.parallel('run','watch'));
